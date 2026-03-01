@@ -21,3 +21,4 @@ class BasePage:
     def input_text(self, content):
         """계정 정보 입력"""
         text(content)
+        
