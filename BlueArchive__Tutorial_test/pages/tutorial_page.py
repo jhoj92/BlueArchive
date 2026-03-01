@@ -13,7 +13,7 @@ class TutorialPage(BasePage):
         return os.path.join(IMG_DIR, folder, name)
     
     # =========================================================
-    # [1] 튜토리얼 별 이미리 리스트 정리
+    # [1] 튜토리얼 별 이미지 리스트 정리
     # =========================================================
     
     # 0. 공용 버튼 관련
@@ -25,8 +25,8 @@ class TutorialPage(BasePage):
     daily_02 = Template(path("00_common", "06_출석부2.png"))
 
     # 1. 타이틀 화면 진입 및 계정 생성
-    user_name = "지호준"
-    user_voice = "지호준"
+    user_name = "지쿠니"
+    user_voice = "지쿠니"
 
     download_btn = Template(path("01_chapter", "01_다운로드 버튼.png"))
     k_voice_btn = Template(path("01_chapter", "02_한국어 음성 선택.png"))
@@ -272,6 +272,7 @@ class TutorialPage(BasePage):
         wait(self.tank_06)
         self.skip_story_action()
 
+        # 오프닝 건너뛰기 
         sleep(5.0)
         touch((1410, 328))    
         self.step(self.tank_07)
@@ -280,7 +281,7 @@ class TutorialPage(BasePage):
         """가챠 튜토리얼"""
         print(">>> Chapter 4: 가챠")
         
-        # 가챠 뽑기 진행
+        # 가챠 첫 뽑기 진행
         gacha_01 = [
             self.gacha_01, self.gacha_02, self.gacha_03,
             self.gacha_04, self.gacha_05, self.gacha_06,
@@ -290,11 +291,12 @@ class TutorialPage(BasePage):
         for g in gacha_01:
             self.step(g)
             
-        # 3성 연속 획득 가능성에 대한 대응(만일 2개 이상 획득 시 같은 코드 한 줄 더 추가)
+        # 3성 연속 획득 가능성에 대한 대응
+        # 최대한 여유롭게 2회까지 확인하도록 설정, 만일 2개 이상 획득 시 같은 코드 한 줄 더 추가
         self.step_pass(self.gacha_08)
         self.step_pass(self.gacha_08)
             
-        # 뽑기 재진행
+        # 첫 뽑기 진행 후 다시뽑기 진행
         gacha_02 = [
             self.gacha_09, self.gacha_10, self.gacha_11,
             self.gacha_12, self.gacha_13, self.gacha_14,
@@ -305,12 +307,12 @@ class TutorialPage(BasePage):
         ]
         for g in gacha_02:
             self.step(g)
-            
-        # 다시하기 후 스킵
+
         self.step(self.gacha_07)
         self.step(self.gacha_07)
         
-        # 3성 연속 획득 가능성에 대한 대응(만일 2개 이상 획득 시 같은 코드 한 줄 더 추가)
+        # 3성 연속 획득 가능성에 대한 대응
+        # 최대한 여유롭게 2회까지 확인하도록 설정, 만일 2개 이상 획득 시 같은 코드 한 줄 더 추가
         self.step_pass(self.gacha_08)
         self.step_pass(self.gacha_08)
         
@@ -323,7 +325,7 @@ class TutorialPage(BasePage):
             self.step(g)
 
         sleep(2.0)
-        touch((1140, 815))
+        touch((1140, 815)) # 이미지 터치 인식이 어려운 부분에 대한 좌표 터치로 대응
         
         gacha_04 = [
             self.gacha_27, self.gacha_28, self.gacha_29
@@ -352,7 +354,7 @@ class TutorialPage(BasePage):
 
         wait(self.mission_37)
         sleep(2.0)
-        touch((1688, 965))
+        touch((1688, 965)) # 이미지 터치 인식이 어려운 부분에 대한 좌표 터치로 대응
 
         missions_02 = [    
             self.mission_38, self.mission_39, self.mission_40,
@@ -362,7 +364,7 @@ class TutorialPage(BasePage):
             self.step(m)
 
     def chapter_6(self):
-        """출석체크 및 로비 + 모모톡 튜토리얼"""
+        """로비 + 모모톡 튜토리얼"""
         print(">>> Chapter 6: 로비 and 모모톡")
         
         # 출석 체크
