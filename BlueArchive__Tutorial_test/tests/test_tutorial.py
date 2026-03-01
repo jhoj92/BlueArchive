@@ -15,3 +15,4 @@ class TestBlueArchive:
         tutorial.chapter_6() # 로비
         
         print("\n>>> 초반 튜토리얼 테스트 완료")
+        
