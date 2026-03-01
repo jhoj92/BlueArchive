@@ -25,8 +25,8 @@ class TutorialPage(BasePage):
     daily_02 = Template(path("00_common", "06_출석부2.png"))
 
     # 1. 타이틀 화면 진입 및 계정 생성
-    user_name = "지호준"
-    user_voice = "지호준"
+    user_name = "지쿠니"
+    user_voice = "지쿠니"
 
     download_btn = Template(path("01_chapter", "01_다운로드 버튼.png"))
     k_voice_btn = Template(path("01_chapter", "02_한국어 음성 선택.png"))
