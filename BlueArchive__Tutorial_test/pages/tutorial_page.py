@@ -15,7 +15,7 @@ class TutorialPage(BasePage):
     # =========================================================
     # [1] 튜토리얼 별 이미리 리스트 정리
     # =========================================================
-
+    
     # 0. 공용 버튼 관련
     menu_btn = Template(path("00_common", "01_메뉴 버튼.png"))
     skip_btn = Template(path("00_common", "02_스킵 버튼.png"))
@@ -25,10 +25,10 @@ class TutorialPage(BasePage):
     daily_02 = Template(path("00_common", "06_출석부2.png"))
 
     # 1. 타이틀 화면 진입 및 계정 생성
-    user_name = "지쿠니"
-    user_voice = "지쿠니"
+    user_name = "지호준"
+    user_voice = "지호준"
 
-    downlode_btn = Template(path("01_chapter", "01_다운로드 버튼.png"))
+    download_btn = Template(path("01_chapter", "01_다운로드 버튼.png"))
     k_voice_btn = Template(path("01_chapter", "02_한국어 음성 선택.png"))
     j_voice_btn = Template(path("01_chapter", "03_일본어 음성 선택.png"))
     voice_check_btn = Template(path("01_chapter", "04_음성 선택 확인 버튼.png"))
