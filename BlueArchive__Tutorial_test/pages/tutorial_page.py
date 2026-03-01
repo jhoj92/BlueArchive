@@ -11,14 +11,16 @@ class TutorialPage(BasePage):
 
     def path(folder, name):
         return os.path.join(IMG_DIR, folder, name)
+    
+    # =========================================================
+    # [1] 튜토리얼 별 이미리 리스트 정리
+    # =========================================================
 
     # 0. 공용 버튼 관련
     menu_btn = Template(path("00_common", "01_메뉴 버튼.png"))
     skip_btn = Template(path("00_common", "02_스킵 버튼.png"))
     skip_check_btn = Template(path("00_common", "03_스킵 확인 버튼.png"))
-
     tutorial_complete_btn = Template(path("00_common", "04_튜토리얼 임무 확인 버튼.png"))
-
     daily_01 = Template(path("00_common", "05_출석부1.png"))
     daily_02 = Template(path("00_common", "06_출석부2.png"))
 
@@ -82,8 +84,6 @@ class TutorialPage(BasePage):
     tank_05 = Template(path("03_chapter", "10_탱크 시스템 안내.png"))
     tank_06 = Template(path("03_chapter", "11_탱크 시스템 안내.png"))
     tank_07 = Template(path("03_chapter", "12_탱크 시스템 안내.png"))
-
-
 
     # 4. 가챠 (Gacha)
     gacha_01 = Template(path("04_chapter", "01_가챠 시스템 안내.png"))
@@ -179,7 +179,7 @@ class TutorialPage(BasePage):
     lobby_16 = Template(path("06_chapter", "16_모모톡 시스템 안내.png"))
     
     # =========================================================
-    # [2] 동작 로직 (Methods)
+    # [2] 동작 로직
     # =========================================================
 
     def skip_story_action(self):
