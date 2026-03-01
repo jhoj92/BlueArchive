@@ -383,3 +383,4 @@ class TutorialPage(BasePage):
         
         for l in lobbies:
             self.step(l)
+            

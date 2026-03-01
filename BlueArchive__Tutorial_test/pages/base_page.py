@@ -1,7 +1,7 @@
 from airtest.core.api import *
 
 class BasePage:
-    """tutorial_page에서 사용될 기능"""
+    """tutorial_page에서 작동하는 기능"""
 
     def step(self, img):
         """이미지 확인 및 터치"""
