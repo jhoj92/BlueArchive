@@ -23,3 +23,4 @@ def setup_automation():
     ST.FIND_TIMEOUT = 120
     
     print("[Setup] 기기 연결 완료")
+    
