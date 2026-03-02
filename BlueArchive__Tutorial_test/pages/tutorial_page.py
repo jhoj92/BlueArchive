@@ -194,7 +194,7 @@ class TutorialPage(BasePage):
         """타이틀 화면 진입 및 계정 생성"""
         print(">>> Chapter 1: 자동화 테스트를 시작합니다.")
 
-        # 데이터 다운 및 계정 생성
+        # 계정 생성
         self.step(self.start_btn)
         self.step(self.alarm_btn)
         
