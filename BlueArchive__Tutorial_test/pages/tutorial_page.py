@@ -2,7 +2,7 @@ import os
 from airtest.core.api import *
 from airtest.core.cv import Template
 from pages.base_page import BasePage
-
+ 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(CURRENT_DIR)
 IMG_DIR = os.path.join(ROOT_DIR, "images.air")
