@@ -226,7 +226,6 @@ class TutorialPage(BasePage):
             self.skill_card_13, self.skill_card_14, self.skill_card_15,
             self.skill_card_16, self.skill_card_17
         ]
-        
         for c in cards:
             self.step(c)
 
@@ -238,7 +237,7 @@ class TutorialPage(BasePage):
 
 
     def chapter_3(self):
-        """엄폐 및 탱크"""
+        """엄폐 및 탱크 튜토리얼"""
         print(">>> Chapter 3: 엄폐 및 탱크")
         
         # 엄폐 튜토리얼 진행
@@ -274,7 +273,7 @@ class TutorialPage(BasePage):
 
         # 오프닝 건너뛰기 
         sleep(5.0)
-        touch((1410, 328))    
+        touch((1410, 328)) # 이미지 터치 인식이 어려운 부분에 대한 좌표 터치로 대응   
         self.step(self.tank_07)
 
     def chapter_4(self):
@@ -287,7 +286,6 @@ class TutorialPage(BasePage):
             self.gacha_04, self.gacha_05, self.gacha_06,
             self.gacha_07, self.gacha_07
         ]
-
         for g in gacha_01:
             self.step(g)
             
@@ -325,7 +323,7 @@ class TutorialPage(BasePage):
             self.step(g)
 
         sleep(2.0)
-        touch((1140, 815)) # 이미지 터치 인식이 어려운 부분에 대한 좌표 터치로 대응
+        touch((1140, 815)) # 이미지 터치 인식이 어려운 부분은 대한 좌표 터치로 대응
         
         gacha_04 = [
             self.gacha_27, self.gacha_28, self.gacha_29
